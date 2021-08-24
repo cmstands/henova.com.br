@@ -4,9 +4,11 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "dev": "next",
+    "dev": "next -p 4002",
     "build": "next build",
-    "start": "next start"
+    "start": "next start",
+    "pm2-start": "pm2 start server.js --name \"henova\" --env production -- start",
+    "deploy": "git fetch --all && git reset --hard origin/master && git pull origin master && npm install && npm run build && pm2 restart henova"
   },
   "keywords": [],
   "author": "",
