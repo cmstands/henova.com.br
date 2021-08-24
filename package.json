@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    dev": "node server.js",
+    "dev": "node server.js",
     "build": "next build",
     "start": "NODE_ENV=production node server.js",
     "pm2-start": "NODE_ENV=production pm2 start server.js --name \"henova\" --env production -- start",
